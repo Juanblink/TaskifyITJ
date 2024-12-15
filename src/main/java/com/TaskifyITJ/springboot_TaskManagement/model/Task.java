@@ -1,17 +1,28 @@
 package com.TaskifyITJ.springboot_TaskManagement.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity // Marks the class as a JPA entity
 public class Task {
 
+    @Id // Marks the field as the primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Automatically generates the ID
     private int ID;
+
     private String Title;
     private String Description;
     private int Status;
 
+    public Task() {} // Default constructor required by JPA
+
     public Task(int ID, String title, String description, int status) {
         this.ID = ID;
-        Title = title;
-        Description = description;
-        Status = status;
+        this.Title = title;
+        this.Description = description;
+        this.Status = status;
     }
 
     public int getID() {
