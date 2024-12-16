@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * package com.taskifyitj.springboot_TaskManagement.services; THIS WILL SOLVE THE PROBLEMS TO SONAR QUBE
+ */
+
 @RestController
 @RequestMapping("/tasks")
 public class TaskRestController {

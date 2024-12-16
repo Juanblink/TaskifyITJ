@@ -2,6 +2,9 @@ package com.TaskifyITJ.springboot_TaskManagement.model;
 
 import jakarta.persistence.*;
 
+/**
+ * package com.taskifyitj.springboot_TaskManagement.services; THIS WILL SOLVE THE PROBLEMS TO SONAR QUBE
+ */
 @Entity
 @Table(name = "tasks")
 public class Task {
