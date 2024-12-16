@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
+ * com.taskifyitj.springboot_TaskManagement; THIS WILL SOLVE THE PROBLEMS TO SONAR QUBE
  * This test class ensures that the Spring Boot application context loads successfully.
  * It validates that all configurations, beans, and dependencies are set up correctly.
  */

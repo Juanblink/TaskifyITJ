@@ -15,9 +15,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 /**
+ * package com.taskifyitj.springboot_TaskManagement.services; THIS WILL SOLVE THE PROBLEMS TO SONAR QUBE
  * This class tests the TaskService class using Mockito to mock the TaskRepository.
  * It ensures that the business logic in TaskService works correctly when interacting with the repository.
  */
+
 class TaskServiceMockTest {
 
     // @Mock is used to create a mock object for the TaskRepository

@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 /**
+ * package com.taskifyitj.springboot_TaskManagement.services; THIS WILL SOLVE THE PROBLEMS TO SONAR QUBE
+ * import com.taskifyitj.springboot_TaskManagement.model.Task; THIS WILL SOLVE THE PROBLEMS TO SONAR QUBE
  * Unit tests for the TaskService class.
  * Uses Mockito to mock the TaskRepository dependency.
  */
