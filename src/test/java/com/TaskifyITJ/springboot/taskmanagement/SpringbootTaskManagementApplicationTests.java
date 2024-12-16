@@ -1,4 +1,4 @@
-package com.TaskifyITJ.springboot_TaskManagement;
+package com.taskifyitj.springboot.taskmanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

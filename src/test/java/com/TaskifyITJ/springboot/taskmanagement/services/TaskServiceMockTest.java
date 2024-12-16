@@ -1,6 +1,6 @@
-package com.TaskifyITJ.springboot_TaskManagement.services;
+package com.taskifyitj.springboot.taskmanagement.services;
 
-import com.TaskifyITJ.springboot_TaskManagement.model.Task;
+import com.taskifyitj.springboot.taskmanagement.model.Task;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -9,7 +9,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -44,20 +43,18 @@ class TaskServiceMockTest {
      * It checks if the method correctly retrieves all tasks from the repository.
      */
     @Test
-    void testGetAllTasks() {
-        // Arrange: Define behavior for the mock TaskRepository
+    void testFindAllTasks() {
+        // Arrange: Mock repository behavior
         when(taskRepository.findAll()).thenReturn(Arrays.asList(
                 new Task(1, "Task 1", "Description 1", 1),
                 new Task(2, "Task 2", "Description 2", 2)
         ));
 
-        // Act: Call the method we are testing
-        List<Task> tasks = taskService.getAllTasks();
+        // Act: Call the method being tested
+        List<Task> tasks = taskService.findAllTasks();
 
-        // Assert: Verify that the result matches the expected output
-        assertEquals(2, tasks.size()); // Check that two tasks are returned
-
-        // Verify: Ensure the findAll() method of TaskRepository was called exactly once
+        // Assert: Verify the result
+        assertEquals(2, tasks.size());
         verify(taskRepository, times(1)).findAll();
     }
 

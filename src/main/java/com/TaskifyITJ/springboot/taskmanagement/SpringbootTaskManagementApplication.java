@@ -1,4 +1,4 @@
-package com.TaskifyITJ.springboot_TaskManagement;
+package com.taskifyitj.springboot.taskmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

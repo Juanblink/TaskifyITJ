@@ -1,4 +1,4 @@
-package com.TaskifyITJ.springboot_TaskManagement.controllers;
+package com.taskifyitj.springboot.taskmanagement.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

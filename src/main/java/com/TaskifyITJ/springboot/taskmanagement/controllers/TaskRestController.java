@@ -1,7 +1,7 @@
-package com.TaskifyITJ.springboot_TaskManagement.controllers;
+package com.taskifyitj.springboot.taskmanagement.controllers;
 
-import com.TaskifyITJ.springboot_TaskManagement.model.Task;
-import com.TaskifyITJ.springboot_TaskManagement.services.TaskService;
+import com.taskifyitj.springboot.taskmanagement.model.Task;
+import com.taskifyitj.springboot.taskmanagement.services.TaskService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,27 +17,35 @@ public class TaskRestController {
         this.taskService = taskService;
     }
 
-    // Retrieve all tasks
+    /**
+     * Retrieve all tasks.
+     */
     @GetMapping
     public List<Task> getAllTasks() {
-        return taskService.getAllTasks();
+        return taskService.findAllTasks();
     }
 
-    // Retrieve a task by ID
+    /**
+     * Retrieve a task by its ID.
+     */
     @GetMapping("/{id}")
     public ResponseEntity<Task> getTaskById(@PathVariable int id) {
-        return taskService.getTaskById(id)
+        return taskService.findTaskById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Create a new task
+    /**
+     * Create a new task.
+     */
     @PostMapping
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
         return ResponseEntity.ok(taskService.createTask(task));
     }
 
-    // Update an existing task
+    /**
+     * Update an existing task.
+     */
     @PutMapping("/{id}")
     public ResponseEntity<Task> updateTask(@PathVariable int id, @RequestBody Task updatedTask) {
         return taskService.updateTask(id, updatedTask)
@@ -45,13 +53,14 @@ public class TaskRestController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Delete a task
+    /**
+     * Delete a task by its ID.
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteTask(@PathVariable int id) {
         if (taskService.deleteTask(id)) {
             return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
         }
+        return ResponseEntity.notFound().build();
     }
 }

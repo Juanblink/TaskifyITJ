@@ -1,6 +1,6 @@
-package com.TaskifyITJ.springboot_TaskManagement.services;
+package com.taskifyitj.springboot.taskmanagement.services;
 
-import com.TaskifyITJ.springboot_TaskManagement.model.Task;
+import com.taskifyitj.springboot.taskmanagement.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
